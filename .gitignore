@@ -1,0 +1,64 @@
+# Ambientes virtuais
+.MLvenv/
+.venv/
+venv/
+env/
+
+# Python: bytecode, caches e builds
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+.jupyter/
+
+# Variaveis de ambiente e segredos
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Saidas e artefatos gerados por modelos/experimentos
+artifacts/
+checkpoints/
+models/
+outputs/
+runs/
+logs/
+wandb/
+mlruns/
+lightning_logs/
+*.ckpt
+*.onnx
+*.pt
+*.pth
+
+# Editores e sistema operacional
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Arquivos temporarios
+*.log
+*.tmp
+*.temp
+*.swp
+~$*
+
+
+
+.pdf
