@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Catálogo de notebooks e experimentos de Machine Learning.">
+    <meta name="theme-color" content="#f5f7fb">
+    <title>Machine Learning Notebooks</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <a class="eyebrow" href="https://github.com/joaopjpc/Machine-Learning-">Repositório de estudos</a>
+        <h1>Machine Learning Notebooks</h1>
+        <p>Uma coleção de experimentos sobre modelos, técnicas e conceitos de aprendizado de máquina.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="controls" aria-label="Filtros do catálogo">
+        <label class="search" for="search-input">
+          <span>Buscar projetos</span>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Título, dataset, modelo ou técnica..."
+            autocomplete="off"
+          >
+        </label>
+
+        <div class="filter-status">
+          <p id="result-count" aria-live="polite">Carregando projetos...</p>
+          <div id="active-filter" class="active-filter" hidden></div>
+          <button id="clear-filters" class="clear-button" type="button" disabled>
+            Limpar filtros
+          </button>
+        </div>
+      </section>
+
+      <section id="projects-grid" class="projects-grid" aria-label="Notebooks"></section>
+
+      <p id="empty-state" class="empty-state" hidden>
+        Nenhum notebook corresponde aos filtros atuais.
+      </p>
+
+      <p id="error-state" class="error-state" role="alert" hidden>
+        Não foi possível carregar o catálogo. Execute a página por um servidor local ou tente novamente.
+      </p>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>Catálogo gerado a partir de <code>docs/projects.json</code>.</p>
+      </div>
+    </footer>
+
+    <noscript>Ative o JavaScript para visualizar e filtrar os notebooks.</noscript>
+  </body>
+</html>

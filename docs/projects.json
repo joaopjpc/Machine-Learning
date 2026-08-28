@@ -1,0 +1,132 @@
+[
+  {
+    "title": "Diamonds — Feature Engineering + Linear Regression",
+    "dataset": "Diamonds",
+    "type": "Regressão · engenharia de atributos",
+    "description": "Avalia o impacto de novas variáveis na previsão de preços de diamantes com regressão linear.",
+    "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/diamonds-feature-engineering.ipynb",
+    "tags": {
+      "problem": ["Regression"],
+      "models": ["Linear Regression"],
+      "techniques": ["Feature Engineering"],
+      "concepts": []
+    }
+  },
+  {
+    "title": "Diamonds — Model Selection",
+    "dataset": "Diamonds",
+    "type": "Regressão · seleção de modelos",
+    "description": "Compara regressão linear, KNN e gradient boosting com validação cruzada para prever preços.",
+    "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/diamonds-model-selection.ipynb",
+    "tags": {
+      "problem": ["Regression"],
+      "models": ["Linear Regression", "KNN", "Gradient Boosting"],
+      "techniques": ["Model Selection", "Cross Validation", "Nested Cross Validation"],
+      "concepts": []
+    }
+  },
+  {
+    "title": "Diamonds — Conformal Prediction",
+    "dataset": "Diamonds",
+    "type": "Regressão · quantificação de incerteza",
+    "description": "Constrói intervalos de predição conformes e avalia sua cobertura na estimativa de preços.",
+    "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/diamonds-conformal-prediction.ipynb",
+    "tags": {
+      "problem": ["Regression"],
+      "models": ["Gradient Boosting"],
+      "techniques": ["Conformal Prediction"],
+      "concepts": ["Uncertainty Quantification"]
+    }
+  },
+  {
+    "title": "A652 — Ordinal Multiclass Classification",
+    "dataset": "A652",
+    "type": "Classificação · multiclasse ordinal",
+    "description": "Modela níveis ordenados de precipitação e compara a abordagem ordinal com baselines nominais.",
+    "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/a652-ordinal-multiclass-classification.ipynb",
+    "tags": {
+      "problem": ["Classification", "Multiclass Classification", "Ordinal Classification"],
+      "models": ["Gradient Boosting"],
+      "techniques": [],
+      "concepts": ["Class Imbalance"]
+    }
+  },
+  {
+    "title": "A652 — Imbalanced Binary Classification",
+    "dataset": "A652",
+    "type": "Classificação · classes desbalanceadas",
+    "description": "Compara reamostragem e seleção de limiar em uma classificação binária desbalanceada.",
+    "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/a652-imbalanced-binary-classification.ipynb",
+    "tags": {
+      "problem": ["Classification", "Binary Classification"],
+      "models": ["Gradient Boosting"],
+      "techniques": ["Oversampling", "Undersampling", "Threshold Selection"],
+      "concepts": ["Class Imbalance"]
+    }
+  },
+  {
+    "title": "A652 — Two-stage Classification + Regression",
+    "dataset": "A652",
+    "type": "Classificação + regressão · modelo em duas etapas",
+    "description": "Combina classificação de ocorrência de chuva e regressão de intensidade em um fluxo de duas etapas.",
+    "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/a652-two-stage-classification-regression.ipynb",
+    "tags": {
+      "problem": ["Classification", "Regression", "Binary Classification"],
+      "models": ["Gradient Boosting"],
+      "techniques": [],
+      "concepts": ["Two-stage Model", "Hurdle Model", "Class Imbalance"]
+    }
+  },
+  {
+    "title": "Wine — MLP Classification with PyTorch",
+    "dataset": "Wine",
+    "type": "Classificação · rede neural",
+    "description": "Treina uma MLP em PyTorch para classificar as três classes do conjunto Wine.",
+    "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/wine-mlp-classification-pytorch.ipynb",
+    "tags": {
+      "problem": ["Classification", "Multiclass Classification"],
+      "models": ["MLP"],
+      "techniques": [],
+      "concepts": []
+    }
+  },
+  {
+    "title": "California Housing — MLP Regression with PyTorch",
+    "dataset": "California Housing",
+    "type": "Regressão · rede neural",
+    "description": "Aplica uma MLP em PyTorch à previsão de valores de imóveis no California Housing.",
+    "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/california-housing-mlp-regression-pytorch.ipynb",
+    "tags": {
+      "problem": ["Regression"],
+      "models": ["MLP"],
+      "techniques": [],
+      "concepts": []
+    }
+  },
+  {
+    "title": "Wine — Dataset Cartography / Data Maps",
+    "dataset": "Wine",
+    "type": "Classificação · diagnóstico de dados",
+    "description": "Usa a dinâmica de treinamento de uma MLP para mapear exemplos fáceis, ambíguos e difíceis.",
+    "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/wine-dataset-cartography.ipynb",
+    "tags": {
+      "problem": ["Classification", "Multiclass Classification"],
+      "models": ["MLP"],
+      "techniques": [],
+      "concepts": ["Dataset Cartography"]
+    }
+  },
+  {
+    "title": "Loan Default — Probability Calibration + Threshold Selection",
+    "dataset": "Loan Default",
+    "type": "Classificação · decisão sensível a custo",
+    "description": "Seleciona modelos, calibra probabilidades e escolhe limiares considerando custos assimétricos.",
+    "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/loan-calibration-cost-sensitive-classification.ipynb",
+    "tags": {
+      "problem": ["Classification", "Binary Classification"],
+      "models": ["Logistic Regression", "KNN", "Gradient Boosting"],
+      "techniques": ["Model Selection", "Probability Calibration", "Platt Scaling", "Threshold Selection"],
+      "concepts": ["Cost-sensitive Learning"]
+    }
+  }
+]
