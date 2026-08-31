@@ -4,6 +4,7 @@
     "dataset": "Diamonds",
     "type": "Regressão · engenharia de atributos",
     "description": "Avalia o impacto de novas variáveis na previsão de preços de diamantes com regressão linear.",
+    "context": "O preço de um diamante depende de diferentes características relacionadas ao seu tamanho e à sua qualidade. Entretanto, as variáveis originais nem sempre representam diretamente todas as relações relevantes entre essas características e o preço.\n\nNeste projeto, novas variáveis são construídas a partir das informações já disponíveis, buscando representar melhor aspectos como o volume aproximado do diamante e relações não lineares envolvendo seu tamanho e peso. A utilidade dessas novas informações é investigada por meio de análise exploratória e pela comparação do desempenho de modelos treinados com e sem as features criadas.",
     "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/diamonds-feature-engineering.ipynb",
     "tags": {
       "problem": ["Regression"],
@@ -17,6 +18,7 @@
     "dataset": "Diamonds",
     "type": "Regressão · seleção de modelos",
     "description": "Compara regressão linear, KNN e gradient boosting com validação cruzada para prever preços.",
+    "context": "O preço de um diamante é influenciado por características numéricas, como peso e dimensões, e por atributos categóricos relacionados à sua qualidade. Como diferentes algoritmos podem capturar essas relações de maneiras distintas, é necessário comparar alternativas antes de escolher um modelo para realizar as previsões.\n\nNeste projeto, diferentes modelos de regressão são treinados para estimar o preço de diamantes a partir de suas características. A escolha do modelo considera seu desempenho em dados não utilizados diretamente no treinamento, seguida de uma avaliação final da qualidade das previsões.",
     "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/diamonds-model-selection.ipynb",
     "tags": {
       "problem": ["Regression"],
@@ -30,6 +32,7 @@
     "dataset": "Diamonds",
     "type": "Regressão · quantificação de incerteza",
     "description": "Constrói intervalos de predição conformes e avalia sua cobertura na estimativa de preços.",
+    "context": "Uma previsão pontual de preço informa apenas o valor considerado mais provável pelo modelo, mas não mostra o quanto essa previsão é incerta. Em problemas reais, pode ser mais útil fornecer uma faixa de valores plausíveis para o preço de um diamante.\n\nNeste projeto, além de estimar o preço, são construídos intervalos de predição com cobertura nominal de 90%. Uma parte separada dos dados é utilizada para medir os erros do modelo e determinar o tamanho desses intervalos, permitindo avaliar tanto sua cobertura quanto a incerteza associada a diferentes previsões.",
     "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/diamonds-conformal-prediction.ipynb",
     "tags": {
       "problem": ["Regression"],
@@ -43,6 +46,7 @@
     "dataset": "A652",
     "type": "Classificação · multiclasse ordinal",
     "description": "Modela níveis ordenados de precipitação e compara a abordagem ordinal com baselines nominais.",
+    "context": "A intensidade da precipitação pode ser representada por categorias que possuem uma ordem natural, indo da ausência de chuva até eventos extremos. Isso torna o problema diferente de uma classificação multiclasse comum, já que confundir chuva fraca com moderada é menos grave do que confundir ausência de chuva com uma tempestade.\n\nNeste projeto, os valores contínuos de precipitação são convertidos em cinco níveis ordenados — NONE, WEAK, MODERATE, STRONG e EXTREME — e são comparadas duas formas de classificação: uma abordagem convencional e outra que incorpora explicitamente a relação de ordem entre as classes.",
     "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/a652-ordinal-multiclass-classification.ipynb",
     "tags": {
       "problem": ["Classification", "Multiclass Classification", "Ordinal Classification"],
@@ -56,6 +60,7 @@
     "dataset": "A652",
     "type": "Classificação · classes desbalanceadas",
     "description": "Compara reamostragem e seleção de limiar em uma classificação binária desbalanceada.",
+    "context": "Dados meteorológicos de precipitação apresentam uma característica importante: na maior parte das observações não há chuva. Ao transformar a previsão de precipitação em um problema de identificar se está chovendo ou não, surge um conjunto de dados fortemente desbalanceado, com muito mais exemplos de ausência de chuva.\n\nNeste projeto, o objetivo é investigar como esse desbalanceamento afeta a capacidade de identificar eventos de precipitação. Um modelo sem tratamento do desbalanceamento é usado como referência e comparado com diferentes estratégias para aumentar a atenção dada aos casos menos frequentes de chuva.",
     "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/a652-imbalanced-binary-classification.ipynb",
     "tags": {
       "problem": ["Classification", "Binary Classification"],
@@ -69,6 +74,7 @@
     "dataset": "A652",
     "type": "Classificação + regressão · modelo em duas etapas",
     "description": "Combina classificação de ocorrência de chuva e regressão de intensidade em um fluxo de duas etapas.",
+    "context": "Prever diretamente a quantidade de chuva é dificultado pelo grande número de observações em que a precipitação é exatamente zero. Em vez de tratar todos os casos da mesma maneira, este projeto divide o problema em duas decisões: primeiro identificar se haverá precipitação e, somente quando houver indicação de chuva, estimar quanto irá chover.\n\nA abordagem busca separar a ocorrência do evento de sua intensidade, permitindo que cada uma dessas etapas seja tratada individualmente antes de produzir a previsão final de precipitação.",
     "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/a652-two-stage-classification-regression.ipynb",
     "tags": {
       "problem": ["Classification", "Regression", "Binary Classification"],
@@ -82,6 +88,7 @@
     "dataset": "Wine",
     "type": "Classificação · rede neural",
     "description": "Treina uma MLP em PyTorch para classificar as três classes do conjunto Wine.",
+    "context": "O conjunto Wine reúne características físico-químicas de diferentes vinhos, associadas a três classes distintas. O objetivo é construir um modelo capaz de identificar corretamente a classe de uma amostra a partir dessas características.\n\nNeste projeto, uma rede neural MLP é treinada para aprender relações não lineares entre os atributos dos vinhos e suas respectivas classes. Os dados são separados para treinamento, validação e teste, permitindo avaliar o comportamento da rede durante o aprendizado e seu desempenho em amostras não utilizadas no treinamento.",
     "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/wine-mlp-classification-pytorch.ipynb",
     "tags": {
       "problem": ["Classification", "Multiclass Classification"],
@@ -95,6 +102,7 @@
     "dataset": "California Housing",
     "type": "Regressão · rede neural",
     "description": "Aplica uma MLP em PyTorch à previsão de valores de imóveis no California Housing.",
+    "context": "O valor de imóveis pode depender de diferentes características socioeconômicas e geográficas de uma região, formando relações que nem sempre são bem representadas por modelos lineares simples.\n\nNeste projeto, uma rede neural MLP é utilizada para estimar o valor mediano de imóveis no conjunto California Housing. O modelo aprende essas relações a partir dos dados de treinamento, enquanto um conjunto separado de validação permite acompanhar seu comportamento durante o aprendizado antes da avaliação final em dados de teste.",
     "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/california-housing-mlp-regression-pytorch.ipynb",
     "tags": {
       "problem": ["Regression"],
@@ -108,6 +116,7 @@
     "dataset": "Wine",
     "type": "Classificação · diagnóstico de dados",
     "description": "Usa a dinâmica de treinamento de uma MLP para mapear exemplos fáceis, ambíguos e difíceis.",
+    "context": "Nem todas as amostras de um conjunto de treinamento contribuem da mesma forma para o aprendizado: algumas são aprendidas rapidamente, outras permanecem ambíguas e algumas podem ser particularmente difíceis ou até indicar inconsistências nos dados.\n\nNeste projeto, é aplicada a abordagem de Dataset Cartography, proposta por Swayamdipta et al. (2020), que utiliza o comportamento do modelo ao longo do treinamento para caracterizar cada exemplo. A partir da confiança e da estabilidade das previsões, são construídos Data Maps que ajudam a identificar regiões com exemplos easy-to-learn, ambiguous e hard-to-learn.",
     "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/wine-dataset-cartography.ipynb",
     "tags": {
       "problem": ["Classification", "Multiclass Classification"],
@@ -121,6 +130,7 @@
     "dataset": "Loan Default",
     "type": "Classificação · decisão sensível a custo",
     "description": "Seleciona modelos, calibra probabilidades e escolhe limiares considerando custos assimétricos.",
+    "context": "Ao avaliar uma solicitação de empréstimo, uma instituição financeira pode utilizar o histórico de clientes anteriores para estimar a probabilidade de pagamento da dívida. Entretanto, os diferentes tipos de erro não necessariamente possuem o mesmo impacto: dependendo do contexto, aprovar um cliente que não pagará pode ser mais custoso do que recusar um cliente que pagaria.\n\nNeste projeto, diferentes modelos de classificação são comparados para prever o pagamento de empréstimos. Além do desempenho preditivo, as probabilidades produzidas pelos modelos são calibradas e os limiares de decisão são ajustados considerando custos diferentes para falsos positivos e falsos negativos.",
     "notebook": "https://github.com/joaopjpc/Machine-Learning-/blob/main/notebooks/loan-calibration-cost-sensitive-classification.ipynb",
     "tags": {
       "problem": ["Classification", "Binary Classification"],

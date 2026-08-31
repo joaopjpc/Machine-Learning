@@ -43,6 +43,7 @@ Inclua um novo objeto no array de [`projects.json`](projects.json), mantendo as 
   "dataset": "Nome do dataset",
   "type": "Classificação · descrição curta",
   "description": "Resumo do experimento.",
+  "context": "Texto com o contexto do problema apresentado no botão expansível.",
   "notebook": "https://github.com/joaopjpc/Machine-Learning/blob/main/notebooks/arquivo.ipynb",
   "tags": {
     "problem": ["Classification"],
@@ -54,6 +55,8 @@ Inclua um novo objeto no array de [`projects.json`](projects.json), mantendo as 
 ```
 
 O card passa a ser criado automaticamente pelo JavaScript. Não é necessário editar o HTML para cada projeto.
+
+O campo `description` deve conter apenas o resumo curto que fica sempre visível. O campo `context` aceita um texto maior e cria automaticamente o botão expansível **Contexto do problema**. Enquanto `context` estiver vazio (`""`), o botão não será exibido. O conteúdo do contexto também participa da busca textual do catálogo. Para separar parágrafos dentro da string JSON, use `\n\n`.
 
 ## 🎨 Cadastrar uma cor de tag
 

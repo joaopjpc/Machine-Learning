@@ -88,6 +88,20 @@ function createTag(tag, category) {
   return button;
 }
 
+function createContext(contextText) {
+  const details = document.createElement("details");
+  details.className = "project-context";
+
+  const summary = document.createElement("summary");
+  summary.textContent = "Contexto do problema";
+
+  const text = document.createElement("p");
+  text.textContent = contextText;
+
+  details.append(summary, text);
+  return details;
+}
+
 function createCard(project) {
   const article = document.createElement("article");
   article.className = "project-card";
@@ -109,6 +123,10 @@ function createCard(project) {
   description.className = "description";
   description.textContent = project.description;
 
+  const context = project.context?.trim()
+    ? createContext(project.context.trim())
+    : null;
+
   const tags = document.createElement("div");
   tags.className = "tags";
   tags.setAttribute("aria-label", `Tags de ${project.title}`);
@@ -124,7 +142,9 @@ function createCard(project) {
   link.textContent = "Abrir notebook no GitHub";
   link.setAttribute("aria-label", `Abrir ${project.title} no GitHub`);
 
-  article.append(type, title, dataset, description, tags, link);
+  article.append(type, title, dataset, description);
+  if (context) article.append(context);
+  article.append(tags, link);
   return article;
 }
 
@@ -133,6 +153,7 @@ function matchesFilters(project) {
   const searchableText = normalize([
     project.title,
     project.description,
+    project.context || "",
     project.dataset,
     project.type,
     ...allTags(project)
