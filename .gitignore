@@ -59,6 +59,7 @@ Desktop.ini
 *.swp
 ~$*
 
-
-
-.pdf
+# Materiais pessoais na raiz do repositorio
+/*.pdf
+/*.txt
+!/requirements.txt
