@@ -1,25 +1,37 @@
-# Machine Learning
+# 🤖 Machine Learning
 
-Repositório de estudos e experimentos de aprendizado de máquina. Os notebooks cobrem classificação, regressão, seleção de modelos, redes neurais, dados desbalanceados e quantificação de incerteza.
+Repositório de estudos e experimentos de aprendizado de máquina. Os projetos exploram diferentes problemas, modelos e estratégias de avaliação por meio de notebooks independentes.
 
-O catálogo visual dos projetos fica em [`docs/`](docs/) e usa apenas HTML, CSS e JavaScript puro.
+**[Acessar a página de Machine Learning Notebooks](https://joaopjpc.github.io/Machine-Learning/)**
 
-## Estrutura
+## 📚 O que há nos notebooks
+
+- **Diamonds:** engenharia de atributos, seleção de modelos e predição conforme para estimar preços.
+- **A652:** classificação ordinal, classificação binária desbalanceada e um modelo de classificação + regressão em duas etapas.
+- **Wine:** classificação com MLP em PyTorch e diagnóstico com Dataset Cartography.
+- **California Housing:** regressão com MLP em PyTorch.
+- **Loan Default:** seleção de modelos, calibração de probabilidades e escolha de limiar sensível a custo.
+
+Entre os modelos e técnicas estudados estão regressão linear e logística, KNN, Gradient Boosting, redes MLP, validação cruzada, reamostragem e quantificação de incerteza.
+
+## 🗂️ Estrutura
 
 ```text
 .
 ├── notebooks/        # Notebooks dos experimentos
 ├── data/             # Datasets locais usados pelos notebooks
-├── docs/             # Página estática do catálogo
+├── docs/             # Página estática do catálogo e sua documentação
+│   ├── assets/
 │   ├── index.html
 │   ├── style.css
 │   ├── app.js
-│   └── projects.json
+│   ├── projects.json
+│   └── README.md
 ├── requirements.txt  # Dependências Python
 └── README.md
 ```
 
-## Executar os notebooks
+## ▶️ Executar os notebooks
 
 Crie e ative um ambiente virtual, instale as dependências e inicie o Jupyter:
 
@@ -30,60 +42,8 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-Os caminhos dos dados partem de `notebooks/`, por isso arquivos locais são carregados por caminhos como `../data/diamonds.csv`.
+Os caminhos dos dados partem de `notebooks/`. Por isso, arquivos locais são carregados por caminhos como `../data/diamonds.csv`.
 
-Para visualizar o catálogo localmente:
+## 🌐 Sobre o catálogo web
 
-```powershell
-python -m http.server 8000 --directory docs
-```
-
-Depois, acesse `http://localhost:8000`.
-
-## Adicionar um notebook
-
-1. Salve o arquivo `.ipynb` em `notebooks/`.
-2. Coloque datasets locais em `data/` e use o caminho relativo `../data/nome-do-arquivo` no notebook.
-3. Adicione o projeto ao catálogo em `docs/projects.json`.
-
-## Adicionar um projeto ao catálogo
-
-Inclua um novo objeto no array de [`docs/projects.json`](docs/projects.json), mantendo as quatro categorias de tags:
-
-```json
-{
-  "title": "Título do projeto",
-  "dataset": "Nome do dataset",
-  "type": "Classificação · descrição curta",
-  "description": "Resumo do experimento.",
-  "notebook": "https://github.com/USUARIO/REPOSITORIO/blob/main/notebooks/arquivo.ipynb",
-  "tags": {
-    "problem": ["Classification"],
-    "models": ["Gradient Boosting"],
-    "techniques": ["Threshold Selection"],
-    "concepts": ["Class Imbalance"]
-  }
-}
-```
-
-Esse arquivo é a única fonte dos dados exibidos nos cards.
-
-## Cadastrar uma cor de tag
-
-Adicione a nova tag ao objeto `tagColors`, no início de [`docs/app.js`](docs/app.js), usando um tom da família de sua categoria:
-
-- `problem`: azul;
-- `models`: roxo;
-- `techniques`: verde;
-- `concepts`: laranja.
-
-Tags sem uma cor cadastrada recebem automaticamente a cor padrão da categoria.
-
-## Publicar com GitHub Pages
-
-1. Envie a pasta `docs/` para a branch `main`.
-2. No GitHub, abra **Settings → Pages**.
-3. Em **Build and deployment**, selecione **Deploy from a branch**.
-4. Selecione a branch `main`, a pasta `/docs` e salve.
-
-Após o deploy, o catálogo ficará disponível em `https://USUARIO.github.io/REPOSITORIO/`. Consulte a [documentação oficial do GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) para detalhes.
+A página é uma interface pequena, feita com HTML, CSS e JavaScript puro, para navegar e filtrar os projetos. As instruções de manutenção estão no **[README da pasta docs](docs/README.md)**.
