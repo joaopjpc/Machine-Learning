@@ -55,6 +55,7 @@ const activeFilter = document.querySelector("#active-filter");
 const clearButton = document.querySelector("#clear-filters");
 const emptyState = document.querySelector("#empty-state");
 const errorState = document.querySelector("#error-state");
+const profileImage = document.querySelector(".profile-photo img");
 
 let projects = [];
 let selectedTag = "";
@@ -177,4 +178,7 @@ async function loadProjects() {
 
 searchInput.addEventListener("input", render);
 clearButton.addEventListener("click", clearFilters);
+profileImage.addEventListener("error", () => {
+  profileImage.hidden = true;
+});
 loadProjects();
